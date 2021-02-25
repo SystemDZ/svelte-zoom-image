@@ -3,9 +3,9 @@
 ---
 
 # svelte app for zoom functionality
-
-[svelte-zoom demo - Repl](https://svelte.dev/repl/63c53d7a035e4b37a57698862273cd1c?version=3.32.3) |
-[svelte-zoom demo - Vercel](https://svelte-zoom-image.vercel.app/)
+svelte-zoom demo
+[Repl](https://svelte.dev/repl/63c53d7a035e4b37a57698862273cd1c?version=3.32.3) |
+[Vercel](https://svelte-zoom-image.vercel.app/)
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
