@@ -4,7 +4,7 @@
 
 # svelte app for zoom functionality
 
-[svelte-zoom demo](svelte-zoom demo)
+[svelte-zoom demo](https://svelte.dev/repl/63c53d7a035e4b37a57698862273cd1c?version=3.32.3)
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
