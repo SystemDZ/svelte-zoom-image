@@ -1,30 +1,41 @@
 <script>
-	export let name;
+	let m = { x: 0, y: 0 };
+	let normalImage = 'https://i.ibb.co/Ph9MCB2/template.png'
+	let zoomedImage = 'https://i.ibb.co/vhL5kH2/image-14.png'
+	let bg = normalImage;
+	function handleMousemove(event) {
+		m.x = -(event.clientX);
+		m.y = -(event.clientY);
+		bg = zoomedImage
+	}
+	function handleMouseOut(event) {
+		m.x = 0;
+		m.y = 0;
+		bg = normalImage
+	}
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<div class="container">
+     <div class="zoom-handler"
+					on:mousemove={handleMousemove}
+					on:mouseout={handleMouseOut}
+					on:click
+					style="--bgx:{m.x}px; --bgy:{m.y}px;--bg: url({bg})">
+     </div>
+</div>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+	.container {
+		 max-width: 670px;
+		 height: 377px;
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	.zoom-handler {
+		max-width: 100%;
+		height: 100%;
+		cursor: crosshair;
+		background-repeat: no-repeat;
+		background-image: var(--bg);
+		background-position-x: var(--bgx);
+		background-position-y: var(--bgy);
 	}
 </style>
